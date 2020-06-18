@@ -1,20 +1,20 @@
 ---
 # gitlab setup
 - name: install dependencies
-  package: 
+  package:
     name: "{{ gitlab_package_dependencies }}"
     state: present
 
 - name: start openssh
   service:
     name: sshd
-    enabled: yes
+    enabled: true
     state: startted
 
 - name: enable postfix for notification
-  service: 
+  service:
     name: postfix
-    enabled: yes
+    enabled: true
     state: started
 
 - name: Checking if gitlab-ctl is exist
@@ -44,4 +44,3 @@
         state: present
       async: 3600
       poll: 30
-
