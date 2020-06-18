@@ -33,7 +33,7 @@
         mode: 0755
 
     - name: Run gitlab installation script
-      shell: /tmp/gitlab_installation_script.sh
+      command: bash /tmp/gitlab_installation_script.sh
       register: shell_output
 
     - name: Install gitlab package

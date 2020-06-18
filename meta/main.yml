@@ -14,5 +14,5 @@ galaxy_info:
         - 7
   galaxy_tags:
     - gitlab
-    - installation_gitlab
-    - configuration_gitlab
+    - installation
+    - configuration
