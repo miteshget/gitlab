@@ -14,4 +14,4 @@ gitlab_package_dependencies:
   - postfix
 
 # public hostname url e.g gitlab.example.com
-public_hostname: "{{ inventory_hostname }}{{ subdomain_base_suffix }}"
+public_hostname: "utility.{{ guid }}{{ subdomain_base_suffix }}"
