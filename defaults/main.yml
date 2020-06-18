@@ -1,9 +1,11 @@
 ---
 # defaults file for gitlab
 gitlab_firewall_ports:
-  - 80
-  - 443
-  - 22
+  - protocol: tcp
+    ports:
+      - 80
+      - 443
+      - 22
 
 gitlab_package_dependencies:
   - curl

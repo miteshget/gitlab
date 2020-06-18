@@ -17,11 +17,10 @@
 
 - name: firewall | Enable firewall ports
   firewalld:
-    port: "{{ item }}"
+    port: "{{ item.1 }}/{{ item.0.protocol }}"
     permanent: true
     immediate: true
     state: enabled
-  with_items:
-    - "{{ gitlab_firewall_ports }}"
+  loop: "{{ gitlab_firewall_ports|subelements('ports') }}"
   tags:
     - configure_gitlab_firewalld

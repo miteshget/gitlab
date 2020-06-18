@@ -9,7 +9,7 @@
   service:
     name: sshd
     enabled: true
-    state: startted
+    state: started
 
 - name: enable postfix for notification
   service:
